@@ -75,9 +75,14 @@
       </p>
       <h3>SGD</h3>
       <p>
-        Everything depends on what you decide on for your size function (Muon,
-        as we'll see later, does a similar thing to AdamW that AdamW does to
-        SGD). Say you choose the Euclidean norm for your size function (your
+        Everything depends on what you decide on for your size
+        function.<label for="sn-muon-preview" class="sidenote-number"></label
+        ><input type="checkbox" id="sn-muon-preview" class="margin-toggle" /><span
+          class="sidenote"
+          >Muon, as we'll see later, does a similar thing to AdamW that AdamW
+          does to SGD.</span
+        >
+        Say you choose the Euclidean norm for your size function (your
         updates under a Euclidean norm "budget" their update in directions
         depending on the gradient magnitude in that direction); then your
         constraint is $\left\| \Delta \theta \right\|_2 \leq \eta$, and your
@@ -270,9 +275,13 @@ print("Muon succeeds!")</code></pre>
         $\Delta \theta$ into the same shape as well, and then dot producting
         these flattened vectors! This inner product on matrices is referred to
         as the Frobenius inner product of a matrix. It's also often denoted by
-        $\operatorname{tr}(A^T B)$, where $A, B \in \mathbb{R}^{m \times n}$
-        (where $\operatorname{tr}(W)$ is the sum of the elements on the main
-        diagonal of $W$. It's a fun exercise to see why this is true).
+        $\operatorname{tr}(A^T B)$, where $A, B \in \mathbb{R}^{m \times
+        n}$.<label for="sn-trace" class="sidenote-number"></label
+        ><input type="checkbox" id="sn-trace" class="margin-toggle" /><span
+          class="sidenote"
+          >$\operatorname{tr}(W)$ is the sum of the elements on the main diagonal
+          of $W$. It's a fun exercise to see why this is true.</span
+        >
       </p>
       <br />
       <p>
